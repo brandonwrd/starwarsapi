@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Ship } from './Ship';
+import { Ship } from './types/Ship';
 
 @Injectable({
   providedIn: 'root'

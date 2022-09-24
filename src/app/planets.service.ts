@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Species } from './types/Species';
+import { Planet } from './types/Planet';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SpeciesService {
-	BASE_URL = 'https://swapi.dev/api/';
+export class PlanetsService {
+  BASE_URL = 'https://swapi.dev/api/'
 
   constructor(private http: HttpClient) { }
 
-  getSpecies(): Observable<Species[]> {
-    return this.http.get<Species[]>(this.BASE_URL + 'species');
+  getPlanets(): Observable<Planet[]> {
+    return this.http.get<Planet[]>(this.BASE_URL + 'planets')
   }
-} 
+}
 
 

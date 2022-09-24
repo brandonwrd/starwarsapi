@@ -1,0 +1,11 @@
+<h3>Planet Descriptions</h3>
+
+<div>
+    <div *ngIf="chosenPlanet">
+        <ul class="types">
+            <li *ngFor="let planets of planets">
+                <a routerLink="/planets/{{ planets.name }}"></a>
+            </li>
+        </ul>
+    </div>
+</div>

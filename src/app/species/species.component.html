@@ -1,9 +1,10 @@
+<h3>Species Descriptions</h3>
+
 <div>
-    <h2>Species</h2>
-    <div class="types" *ngIf="chosenSpecies">
-        <ul *ngFor="let types of species">
-            <li>
-                {{ types.classification }} 
+    <div *ngIf="chosenSpecies">
+        <ul class="types">
+            <li *ngFor="let types of species">
+                <a routerLink="/species/{{ types.name }}"></a>
             </li>
         </ul>
     </div>
